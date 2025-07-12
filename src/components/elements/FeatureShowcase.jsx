@@ -31,8 +31,8 @@ const FeatureShowcase = () => {
       <h1 className="w-full max-w-4xl mx-auto p-8 text-white font-bold text-4xl align-center justify-center flex ">
         About SQARIS
       </h1>
-      <div className="h-[2px] w-[1130px] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
-      <p className="mx-auto text-gray-100 w-[940px] text-center mb-10">
+      <div className="h-[2px]  lg:w-[1130px] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
+      <p className="mx-auto text-gray-100 lg:max-w-[940px]  md:max-w-[560px] max-w-72 text-center mb-10">
         At SQARIS, we believe in lifecycle-aligned rewards & performance, high accountability and initiative, maintaining an 8-hour<br />
         productive workday minimum, with no part-time/side employment. We operate with transparent contribution to operating cost, growth, and valuation.
       </p>
@@ -41,7 +41,7 @@ const FeatureShowcase = () => {
         <div className="relative w-full h-auto md:h-96 bg-gradient-to-r from-black to-gray-900 rounded-3xl border border-gray-600 overflow-hidden p-6">
 
           {/* Responsive column layout for small screens */}
-          <div className="block md:hidden flex flex-col gap-4 items-center">
+          <div className=" md:hidden flex flex-col gap-4 items-center">
             {features.map((feature) => (
               <div
                 key={feature.id}
