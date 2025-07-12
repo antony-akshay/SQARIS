@@ -1,5 +1,6 @@
 import { Boxes } from "./components/ui/Boxes"
-import { BackgroundBoxesDemo } from "./test"
+import Navbar from "./components/ui/NavBar"
+// import { BackgroundBoxesDemo } from "./test"
 
 
 function App() {
@@ -9,10 +10,10 @@ function App() {
     <div className="h-16">
       
         <div className="h-full ">
-                  <BackgroundBoxesDemo/>
+                  {/* <BackgroundBoxesDemo/> */}
+                  <Navbar/>
         </div>
         <h1 className="text-3xl font-bold underline text-green-800">
-
 
       </h1>
 
