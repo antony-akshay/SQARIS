@@ -1,4 +1,5 @@
 // import { BackgroundBoxes } from "./components/elements/BackgroundBoxes";
+import './App.css';
 import BackgroundSection from "./components/elements/BackgroundSection";
 import cnn from '../src/assets/image/technology/cnn.png';
 import python from '../src/assets/image/technology/python.png';
@@ -20,13 +21,23 @@ import Mission from "./components/elements/Mission";
 import Philosophy from "./components/elements/Philosophy";
 import CoreValues from "./components/elements/CoreValues";
 import OurStory from "./components/elements/OurStory";
+import HomeLanding from './components/elements/HomeLanding';
+import LandingBelow from "./components/elements/LandingBelow";
+import FlipCard from './components/elements/Flipcard';
 
 
 function App() {
   return (
-<>
-<OurStory/>
-</>
+    <>
+      <Navbar />
+      <HomeLanding />
+      <LandingBelow />
+      <FeatureShowcase />
+      <Mission />
+      <OurStory />
+      <FlipCard />
+      <InfiniteMovingCardsElement />
+    </>
   );
 }
 
@@ -81,3 +92,4 @@ const items = [
     link: "#",
   },
 ];
+
