@@ -23,6 +23,7 @@ import CoreValues from "./components/elements/CoreValues";
 import OurStory from "./components/elements/OurStory";
 import FlipCard from './components/elements/Flipcard';
 import JobListings from './components/elements/JobListing';
+import TechCardsContainer from './components/elements/TechCard';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 <FlipCard/>
 <JobListings/>
 <InfiniteMovingCardsElement/>
+<TechCardsContainer/>
 </>
   );
 }
