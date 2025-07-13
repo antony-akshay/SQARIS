@@ -1,85 +1,99 @@
-import React from 'react';
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 
 const FeatureShowcase = () => {
   const features = [
-    { id: 1, title: "Innovation through Research", position: "top-left" },
-    { id: 2, title: "Precision in Engineering", position: "top-center" },
-    { id: 3, title: "Ethical AI & Tech Responsibility", position: "top-right" },
-    { id: 4, title: "Commitment to Global Standards", position: "bottom-left" },
-    { id: 5, title: "Scalable AI Products", position: "bottom-right" }
+    { id: 1, title: "Innovation through Research" },
+    { id: 2, title: "Precision in Engineering" },
+    { id: 3, title: "Ethical AI & Tech Responsibility" },
+    { id: 4, title: "Commitment to Global Standards" },
+    { id: 5, title: "Scalable AI Products" },
   ];
-
-  const getPositionClasses = (position) => {
-    switch (position) {
-      case 'top-left':
-        return 'absolute top-0 left-0';
-      case 'top-center':
-        return 'absolute top-0 left-1/2 transform -translate-x-1/2';
-      case 'top-right':
-        return 'absolute top-0 right-0';
-      case 'bottom-left':
-        return 'absolute bottom-0 left-1/4';
-      case 'bottom-right':
-        return 'absolute bottom-0 right-1/4';
-      default:
-        return '';
-    }
-  };
 
   return (
     <>
-      <h1 className="w-full max-w-4xl mx-auto p-8 text-white font-bold text-4xl align-center justify-center flex ">
+      <h1 className="w-full max-w-4xl mx-auto p-8 text-white font-bold text-4xl overflow-x-hidden flex justify-center items-center">
         About SQARIS
       </h1>
-      <div className="h-[2px]  lg:w-[1130px] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
-      <p className="mx-auto text-gray-100 lg:max-w-[940px]  md:max-w-[560px] max-w-72 text-center mb-10">
-        At SQARIS, we believe in lifecycle-aligned rewards & performance, high accountability and initiative, maintaining an 8-hour<br />
-        productive workday minimum, with no part-time/side employment. We operate with transparent contribution to operating cost, growth, and valuation.
+      <div className="h-[2px] w-92 lg:max-w-[90vw] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
+      <p className="mx-auto text-gray-100 lg:max-w-[940px] md:max-w-[560px] max-w-72 text-center mb-10">
+        At SQARIS, we believe in lifecycle-aligned rewards & performance, high
+        accountability and initiative, maintaining an 8-hour
+        <br />
+        productive workday minimum, with no part-time/side employment. We
+        operate with transparent contribution to operating cost, growth, and
+        valuation.
       </p>
 
-      <div className="w-full max-w-7xl mx-auto ">
-        <div className="relative w-full h-auto md:h-96 bg-gradient-to-r from-black to-gray-900 rounded-3xl border border-gray-600 overflow-hidden p-6">
-
-          {/* Responsive column layout for small screens */}
-          <div className=" md:hidden flex flex-col gap-4 items-center">
-            {features.map((feature) => (
-              <div
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full h-auto bg-gradient-to-r from-black to-gray-900 rounded-3xl border border-gray-600 overflow-hidden p-8">
+          {/* Mobile layout: stacked */}
+          <div className="md:hidden flex flex-col gap-8 items-center">
+            {features.map((feature, i) => (
+              <motion.div
                 key={feature.id}
-                className="w-full max-w-xs h-24 bg-black bg-opacity-60 backdrop-blur-sm rounded-3xl border-2 border-teal-600 shadow-inner px-4 flex items-center justify-center text-center"
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: i * 0.1, duration: 0.5, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full max-w-xs h-16 bg-black bg-opacity-60 backdrop-blur-sm rounded-3xl border border-teal-600 shadow-inner px-4 flex items-center justify-center text-center"
                 style={{
                   background: `linear-gradient(172.57deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(to left, #000000, #000000)`,
-                  boxShadow: `inset 0px 7px 17px 0px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 141, 134, 1)`
+                  boxShadow: `inset 0px 7px 17px 0px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 141, 134, 1)`,
                 }}
               >
                 <h3 className="text-gray-200 font-medium text-base leading-tight">
                   {feature.title}
                 </h3>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Absolute-positioned layout for medium and larger screens */}
-          <div className="hidden md:block absolute inset-0 p-12">
-            <div className="relative w-full h-full">
-              {features.map((feature) => (
-                <div
+          {/* Desktop layout: 3 top, 2 bottom centered */}
+          <div className="hidden md:flex flex-col items-center gap-8">
+            {/* Top row */}
+            <div className="flex gap-6 justify-center">
+              {features.slice(0, 3).map((feature, i) => (
+                <motion.div
                   key={feature.id}
-                  className={`${getPositionClasses(feature.position)} w-64 h-24 bg-black bg-opacity-60 backdrop-blur-sm rounded-3xl border-2 border-teal-600 shadow-inner`}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.1, duration: 0.4 }}
+                  className="w-72 h-24 bg-black bg-opacity-60 backdrop-blur-sm rounded-3xl border-2 border-teal-600 shadow-inner text-center flex items-center justify-center px-4"
                   style={{
                     background: `linear-gradient(172.57deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(to left, #000000, #000000)`,
-                    boxShadow: `inset 0px 7px 17px 0px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 141, 134, 1)`
+                    boxShadow: `inset 0px 7px 17px -7px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 141, 134, 1)`,
                   }}
                 >
-                  <div className="flex items-center justify-center h-full px-6 text-center">
-                    <h3 className="text-gray-200 font-medium text-base leading-tight">
-                      {feature.title}
-                    </h3>
-                  </div>
-                </div>
+                  <h3 className="text-gray-200 font-medium text-base leading-tight">
+                    {feature.title}
+                  </h3>
+                </motion.div>
+              ))}
+            </div>
+            {/* Bottom row (centered pair) */}
+            <div className="flex gap-6 justify-center">
+              {features.slice(3).map((feature, i) => (
+                <motion.div
+                  key={feature.id}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: (i + 3) * 0.1, duration: 0.4 }}
+                  className="w-72 h-24 bg-black bg-opacity-60 backdrop-blur-sm rounded-3xl border-2 border-teal-600 shadow-inner text-center flex items-center justify-center px-4"
+                  style={{
+                    background: `linear-gradient(172.57deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(to left, #000000, #000000)`,
+                    boxShadow: `inset 0px 7px 17px -7px rgba(255, 255, 255, 0.6), 0 0 0 1px rgba(0, 141, 134, 1)`,
+                  }}
+                >
+                  <h3 className="text-gray-200 font-medium text-base leading-tight">
+                    {feature.title}
+                  </h3>
+                </motion.div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </>

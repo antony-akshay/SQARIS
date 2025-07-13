@@ -7,15 +7,15 @@ import tenserflow from '../../assets/image/technology/tenserflow.png';
 import deeplearning from '../../assets/image/technology/deeplearning.png';
 import figma from '../../assets/image/technology/figma.png';
 import flutter from '../../assets/image/technology/flutter.png';
-import ml from '../../assets/image/technology/ml.png';
+import ml from '../../assets/image/team/image.png';
 
 import React from "react";
 import { InfiniteMovingCards } from "../ui/InfiniteMovingCards"; // update path if needed
 
 export function InfiniteMovingCardsElement() {
   return (
-    <div className="h-[700px] py-8 flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <div className="text-2xl md:text-5xl my-8 font-semibold text-black dark:text-white">
+    <div className="md:h-[700px] h-[400px] md:py-8 flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <div className="text-2xl md:text-5xl md:my-8 font-semibold text-black dark:text-white">
             Our Team
         </div>
       <InfiniteMovingCards
