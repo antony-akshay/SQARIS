@@ -21,23 +21,18 @@ import Mission from "./components/elements/Mission";
 import Philosophy from "./components/elements/Philosophy";
 import CoreValues from "./components/elements/CoreValues";
 import OurStory from "./components/elements/OurStory";
-import HomeLanding from './components/elements/HomeLanding';
-import LandingBelow from "./components/elements/LandingBelow";
 import FlipCard from './components/elements/Flipcard';
+import JobListings from './components/elements/JobListing';
 
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <HomeLanding />
-      <LandingBelow />
-      <FeatureShowcase />
-      <Mission />
-      <OurStory />
-      <FlipCard />
-      <InfiniteMovingCardsElement />
-    </>
+<>
+<OurStory/>
+<FlipCard/>
+<JobListings/>
+<InfiniteMovingCardsElement/>
+</>
   );
 }
 
