@@ -16,15 +16,17 @@ import FeatureShowcase from "./components/elements/FeatureShowcase";
 
 import { Boxes } from "./components/ui/Boxes";
 import Navbar from "./components/ui/NavBar";
+import Mission from "./components/elements/Mission";
+import Philosophy from "./components/elements/Philosophy";
+import CoreValues from "./components/elements/CoreValues";
+import OurStory from "./components/elements/OurStory";
 
 
 function App() {
   return (
-    <div className="h-16">
-      <div className="h-full ">
-      </div>
-      <h1 className="text-3xl font-bold underline text-green-800"></h1>
-    </div>
+<>
+<OurStory/>
+</>
   );
 }
 
