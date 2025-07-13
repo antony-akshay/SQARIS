@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { clsx } from "clsx";
+import { FaBirthdayCake, FaHome, FaCalendarAlt } from "react-icons/fa";
 
 export const InfiniteMovingCards = ({
   items,
@@ -27,9 +28,9 @@ export const InfiniteMovingCards = ({
         direction === "left" ? "forwards" : "reverse"
       );
 
-      let duration = "40s";
-      if (speed === "fast") duration = "20s";
-      else if (speed === "slow") duration = "80s";
+      let duration = "20s"; // faster scroll
+      if (speed === "fast") duration = "10s";
+      else if (speed === "slow") duration = "30s";
 
       containerRef.current.style.setProperty("--animation-duration", duration);
       setStart(true);
@@ -48,7 +49,7 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={clsx(
-          "flex min-w-max shrink-0 flex-nowrap gap-6 py-6",
+          "flex min-w-max shrink-0 flex-nowrap gap-8 py-6",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -56,23 +57,63 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className=" sm:w-[260px] md:w-[280px] lg:w-[300px] h-[160px] md:h-[253px] lg:h-[380px] rounded-xl overflow-hidden bg-white dark:bg-zinc-900 shadow-md border border-gray-200 dark:border-zinc-700 flex-shrink-0"
+            className="w-[130px] h-[165px] md:w-[260px] md:h-[330px] lg:w-[300px] lg:h-[380px] rounded-xl flex-shrink-0"
           >
-            <div className="h-[75%] flex items-center justify-center relative overflow-hidden">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-full object-contain"
-              />
-              <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-            </div>
-            <div className="h-[25%] bg-white dark:bg-zinc-900 flex flex-col justify-center items-center shadow-inner">
-              <p className="text-sm font-semibold text-gray-800 dark:text-white">
-                {item.name}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                {item.designation}
-              </p>
+            <div className="group w-full h-full">
+              <div className="relative w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                
+                {/* FRONT */}
+                <div className="absolute inset-0 bg-black rounded-2xl overflow-hidden [backface-visibility:hidden]">
+                  <div className="h-[85%] relative">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black" />
+                  </div>
+                  <div className="h-[15%] flex items-center justify-center">
+                    <h2 className="text-green-400 text-sm sm:text-base md:text-lg font-semibold font-[Poppins] text-center px-1">
+                      {item.name}
+                    </h2>
+                  </div>
+                </div>
+
+                {/* BACK */}
+                <div className="absolute inset-0 rounded-2xl bg-[#121212] text-white p-2 sm:p-4 md:p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[10px] sm:text-[12px] md:text-sm leading-tight">
+                  <h2 className="text-green-400 text-[11px] sm:text-base md:text-lg font-bold text-center mb-2 sm:mb-4">
+                    {item.designation}
+                  </h2>
+
+                  {/* DOB */}
+                  <div className="mb-2 sm:mb-3">
+                    <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Date of birth</p>
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                      <span className="text-[10px] sm:text-sm">{item.dob}</span>
+                      <FaBirthdayCake className="text-green-400 text-xs sm:text-base" />
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div className="mb-2 sm:mb-3">
+                    <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Address</p>
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                      <span className="text-[10px] sm:text-sm leading-snug">{item.address}</span>
+                      <FaHome className="text-green-400 text-xs sm:text-base" />
+                    </div>
+                  </div>
+
+                  {/* Join Date */}
+                  <div>
+                    <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Joining date</p>
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                      <span className="text-[10px] sm:text-sm">{item.joinDate}</span>
+                      <FaCalendarAlt className="text-green-400 text-xs sm:text-base" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </li>
         ))}
