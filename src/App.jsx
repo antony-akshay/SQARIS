@@ -20,13 +20,25 @@ import Mission from "./components/elements/Mission";
 import Philosophy from "./components/elements/Philosophy";
 import CoreValues from "./components/elements/CoreValues";
 import OurStory from "./components/elements/OurStory";
+import ProjectElement from "./components/elements/Projectelement";
+import HomeLanding from "./components/elements/HomeLanding";
+import LandingBelow from "./components/elements/LandingBelow";
+import JobListings from "./components/elements/JobListing";
+import CareerSection from "./components/elements/CareerSection";
 
 
 function App() {
   return (
-<>
+<div className="bg-zinc-900">
+  
+<HomeLanding/>
+<LandingBelow/>
+<FeatureShowcase/>
+<Mission/>
 <OurStory/>
-</>
+<CareerSection/>
+<ProjectElement/>
+</div>
   );
 }
 
