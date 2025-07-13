@@ -16,20 +16,12 @@ import FeatureShowcase from "./components/elements/FeatureShowcase";
 
 import { Boxes } from "./components/ui/Boxes";
 import Navbar from "./components/ui/NavBar";
-import './App.css';
-import { HoverEffect } from "./components/ui/card-hover-effect";
-import { cn } from "./lib/utils";
 
 
 function App() {
   return (
     <div className="h-16">
       <div className="h-full ">
-        <Navbar />
-        <BackgroundSection />
-        <FeatureShowcase />
-        <InfiniteMovingCardsElement />
-        <HoverEffect items={items} className="max-w-6xl mx-auto px-4"/>
       </div>
       <h1 className="text-3xl font-bold underline text-green-800"></h1>
     </div>
