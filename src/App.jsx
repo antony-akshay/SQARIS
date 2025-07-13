@@ -16,12 +16,18 @@ import FeatureShowcase from "./components/elements/FeatureShowcase";
 
 import { Boxes } from "./components/ui/Boxes";
 import Navbar from "./components/ui/NavBar";
+import HomeLanding from "./components/elements/HomeLanding";
+import LandingBelow from "./components/elements/LandingBelow";
 
 
 function App() {
   return (
     <div className="h-16">
       <div className="h-full ">
+        <Navbar/>
+        <HomeLanding/>
+        <LandingBelow/>
+        <FeatureShowcase/>
       </div>
       <h1 className="text-3xl font-bold underline text-green-800"></h1>
     </div>
