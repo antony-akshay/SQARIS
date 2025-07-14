@@ -44,11 +44,21 @@ const jobData = [
     description:
       "Kickstart your journey as a QA Engineer with our engineering team! Work on real-world, impactful projects using MongoDB, Express.js, React, and Node.js. You'll collaborate with experienced professionals, solve meaningful challenges, and help build scalable web applications used by users worldwide.",
   },
+  {
+    id: 5,
+    title: "Machine Learning",
+    department: "Developer",
+    type: "Full-time",
+    experience: "1+ years",
+    skills: ["SciKit-Learn", "MLflow", "Postman"],
+    description:
+      "Kickstart your journey as a ML Engineer with our engineering team! Work on real-world projects involving intelligent automation and large-scale data processing. Collaborate with data scientists and engineers to deliver robust ML pipelines.",
+  },
 ];
 
 const JobListings = () => {
   return (
-    <section className="bg-[#0c0c0c] min-h-screen w-full py-20 px-4 sm:px-6 lg:px-10">
+    <section className="bg-black min-h-screen w-full py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
           Open <span className="text-emerald-400">Positions</span>
@@ -58,41 +68,83 @@ const JobListings = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {jobData.map((job, index) => (
-            <motion.div
-              key={job.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-2xl border border-emerald-400 bg-[#101010] text-white p-6 shadow-[0_0_12px_rgba(110,231,183,0.2)] hover:shadow-[0_0_25px_rgba(110,231,183,0.4)] transition duration-300"
-            >
-              <h3 className="text-lg sm:text-xl font-semibold">{job.title}</h3>
-              <p className="text-sm text-gray-400 mt-1">
-                {job.type} · {job.experience}
-              </p>
+          {jobData.map((job, index) => {
+            const isLastOdd =
+              jobData.length % 2 !== 0 && index === jobData.length - 1;
 
-              <p className="mt-4 text-sm text-gray-300 leading-relaxed">
-                {job.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mt-4">
-                {job.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-[#1c1c1c] text-emerald-300 border border-emerald-400"
+            if (isLastOdd) {
+              // Wrap last card in a flex div to center
+              return (
+                <div key={job.id} className="md:col-span-2 flex justify-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="w-full md:w-[48%] rounded-2xl border border-emerald-400 bg-[#101010] text-white p-6 shadow-[0_0_12px_rgba(110,231,183,0.2)] hover:shadow-[0_0_25px_rgba(110,231,183,0.4)] transition duration-300"
                   >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+                    <h3 className="text-lg sm:text-xl font-semibold">
+                      {job.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 mt-1">
+                      {job.type} · {job.experience}
+                    </p>
+                    <p className="mt-4 text-sm text-gray-300 leading-relaxed">
+                      {job.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {job.skills.map((skill, i) => (
+                        <span
+                          key={i}
+                          className="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-[#1c1c1c] text-emerald-300 border border-emerald-400"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-6 flex justify-end">
+                      <button className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
+                        Apply now
+                      </button>
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            }
 
-              <div className="mt-6 flex justify-end">
-                <button className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
-                  Apply now
-                </button>
-              </div>
-            </motion.div>
-          ))}
+            // Regular cards
+            return (
+              <motion.div
+                key={job.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="rounded-2xl border border-emerald-400 bg-[#101010] text-white p-6 shadow-[0_0_12px_rgba(110,231,183,0.2)] hover:shadow-[0_0_25px_rgba(110,231,183,0.4)] transition duration-300"
+              >
+                <h3 className="text-lg sm:text-xl font-semibold">{job.title}</h3>
+                <p className="text-sm text-gray-400 mt-1">
+                  {job.type} · {job.experience}
+                </p>
+                <p className="mt-4 text-sm text-gray-300 leading-relaxed">
+                  {job.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {job.skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-[10px] sm:text-xs px-3 py-1 rounded-full bg-[#1c1c1c] text-emerald-300 border border-emerald-400"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <button className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
+                    Apply now
+                  </button>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

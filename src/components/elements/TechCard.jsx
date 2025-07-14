@@ -19,22 +19,22 @@ import adobe from '../../assets/image/tech/adobe.png'
 // Individual TechCard component that takes props
 const TechCard = ({ img, name, description }) => {
     return (
-        <div className="w-[500px] h-[700px] bg-gradient-to-br from-black-900 via-black to-black-900 border border-gray-700 rounded-2xl relative overflow-hidden flex-shrink-0">
+        <div className="lg:w-[420px] lg:h-[520px] md:w-[500px]  md:h-[550px] w-[280px] h-[360px] bg-gradient-to-br from-black-900 via-black to-black-900 border border-gray-700 rounded-2xl relative overflow-hidden flex-shrink-0">
             {/* Tech Icon */}
-            <div className="absolute left-1/2 top-[84px] transform -translate-x-1/2">
-                <img src={img} alt={name} className="w-[250px] h-[250px] object-contain" />
+            <div className="absolute left-1/2 md:top-16 top-4 transform -translate-x-1/2">
+                <img src={img} alt={name} className=" md:h-40 h-24   object-contain" />
             </div>
 
             {/* Tech Title */}
-            <div className="absolute left-1/2 top-[375px] transform -translate-x-1/2">
-                <h2 className="text-white text-3xl font-semibold font-['Poppins'] leading-8 text-center">
+            <div className="absolute left-1/2 md:top-64 top-32 transform -translate-x-1/2">
+                <h2 className="text-white md:text-3xl text-xl font-semibold font-['Poppins'] leading-8 text-center">
                     {name}
                 </h2>
             </div>
 
             {/* Description */}
-            <div className="absolute left-[67px] top-[459px] w-[381px]">
-                <p className="text-white text-base font-light font-['Poppins'] leading-8 text-left">
+            <div className="absolute md:px-16 md:top-80 px-4 top-44 md:w-full w-[275px]">
+                <p className="text-white md:text-base text-xs font-light font-['Poppins'] leading-8 text-left">
                     {description}
                 </p>
             </div>
@@ -116,11 +116,11 @@ const TechCardsContainer = () => {
 ];
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-black-100 p-8">
+        <div className="flex items-center justify-center  bg-black  py-8">
             <div className="w-full max-w-9xl">
                 {/* Header */}
                 <div className="text-center mb-8">
-                    <h1 className="w-full max-w-4xl mx-auto p-8 text-white font-bold text-4xl overflow-x-hidden flex justify-center items-center">
+                    <h1 className="w-full max-w-4xl mx-auto p-8 bg-gradient-to-r from-green-300 via-emerald-400 to-green-300 bg-clip-text text-transparent font-bold text-4xl md:text-5xl overflow-x-hidden flex justify-center items-center">
                         Technologies
                     </h1>
                 </div>

@@ -13,13 +13,13 @@ const Navbar = () => {
     { name: 'Contact', href: '#' }
   ];
 
-  const navbarStyles = {
-    background: `linear-gradient(172.57deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(to left, #000000, #000000)`,
-    borderRadius: '40px',
-    border: '1px solid #002725',
-    boxShadow: 'inset 0px 8px 15px -8px rgba(255, 255, 255, 0.6)',
-    
-  };
+const navbarStyles = {
+  background: '#000000', // Solid black background
+  borderRadius: '40px',
+  border: '1px solid #002725',
+};
+
+
 
   return (
     <>

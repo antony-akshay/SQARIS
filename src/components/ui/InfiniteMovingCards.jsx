@@ -28,7 +28,7 @@ export const InfiniteMovingCards = ({
         direction === "left" ? "forwards" : "reverse"
       );
 
-      let duration = "20s"; // faster scroll
+      let duration = "20s";
       if (speed === "fast") duration = "10s";
       else if (speed === "slow") duration = "30s";
 
@@ -57,7 +57,8 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="w-[130px] h-[165px] md:w-[260px] md:h-[330px] lg:w-[300px] lg:h-[380px] rounded-xl flex-shrink-0"
+            className="w-[130px] h-[165px] md:w-[260px] md:h-[330px] lg:w-[300px] lg:h-[380px] 
+                       rounded-xl flex-shrink-0 border border-white/10"
           >
             <div className="group w-full h-full">
               <div className="relative w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">

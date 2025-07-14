@@ -16,7 +16,7 @@ import { InfiniteMovingCardsElement } from "./components/elements/InfinteMovingC
 import FeatureShowcase from "./components/elements/FeatureShowcase";
 
 import { Boxes } from "./components/ui/Boxes";
-import Navbar from "./components/ui/NavBar";
+import Navbar from "./components/elements/NavBar";
 import Mission from "./components/elements/Mission";
 import Philosophy from "./components/elements/Philosophy";
 import CoreValues from "./components/elements/CoreValues";
@@ -24,16 +24,32 @@ import OurStory from "./components/elements/OurStory";
 import FlipCard from './components/elements/Flipcard';
 import JobListings from './components/elements/JobListing';
 import TechCardsContainer from './components/elements/TechCard';
+import Footer from './components/elements/Footer';
+import ContactSectionHead from './components/elements/ContactSectionHead';
+import ContactInfoCard from './components/elements/ContactInfoCard';
+import HomeLanding from './components/elements/HomeLanding';
+import LandingBelow from './components/elements/LandingBelow';
+import ProjectElement from './components/elements/ProjectElement';
 
 
 function App() {
   return (
 <>
+<Navbar/>
+<HomeLanding/>
+<LandingBelow/>
+<FeatureShowcase/>
+<Mission/>
 <OurStory/>
-<FlipCard/>
-<JobListings/>
 <InfiniteMovingCardsElement/>
+
+<ProjectElement/>
+<JobListings/>
+
 <TechCardsContainer/>
+<ContactSectionHead/>
+<ContactInfoCard/>
+<Footer/>
 </>
   );
 }
