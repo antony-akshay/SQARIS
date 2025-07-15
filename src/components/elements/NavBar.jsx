@@ -31,11 +31,13 @@ const navbarStyles = {
         >
           {/* Logo */}
           <div className="flex items-center">
-            <img
+            <a href="/home">
+              <img
               src={logo}
               alt="Soaris Logo"
               className=" md:h-14 h-10 w-auto object-cover"
             />
+            </a>
           </div>
 
           {/* Desktop Menu */}

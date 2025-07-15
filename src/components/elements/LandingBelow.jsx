@@ -29,7 +29,7 @@ const fadeIn = {
 
 const LandingBelow = () => {
   return (
-    <section className="bg-black px-4 py-12">
+    <section className="bg-black px-4 py-12 mb-20">
       <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6">
         {cards.map((card, index) => (
           <motion.div
