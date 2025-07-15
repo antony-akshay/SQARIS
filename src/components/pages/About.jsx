@@ -7,6 +7,7 @@ import { InfiniteMovingCardsElement } from "../elements/InfinteMovingCardsElemen
 const About = () => {
   return (
     <section id="about" className="lg:pt-24 bg-black">
+      
       <AboutHead />
       <Mission />
       <OurStory />

@@ -57,18 +57,7 @@ const HomeLanding = () => {
         </p>
 
         {/* Button */}
-        <motion.button
-          custom={2}
-          initial="hidden"
-          animate="visible"
-          variants={fadeInOnly}
-          className="group inline-flex items-center gap-2 px-6 py-2 rounded-full bg-black border border-cyan-400/20 text-white hover:bg-cyan-500/10 transition-all duration-300"
-        >
-          Explore now
-          <span className="transform group-hover:translate-y-1 transition duration-300">
-            <FaChevronDown className="text-cyan-300" />
-          </span>
-        </motion.button>
+
       </motion.div>
       <div className="hidden md:block lg:hidden">
 <LandingBelow/>
