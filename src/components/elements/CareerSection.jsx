@@ -5,16 +5,17 @@ import React from "react";
 const CareerSection = () => {
   return (
     <section className="bg-black text-white py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto mt-20">
         {/* Title with subtle bottom border */}
-        <div className="border-b border-zinc-800 pb-6 mb-10 text-center">
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
          
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
             Career
           </span>
+          
         </h2>
-        </div>
+        <div className="h-[2px] w-92 lg:max-w-[90vw] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
+
 
         {/* Subheading */}
         <div className="text-center mb-6">

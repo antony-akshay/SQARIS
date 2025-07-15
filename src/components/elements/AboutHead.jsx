@@ -8,7 +8,7 @@ const AboutHead = () => {
 
   return (
     <div>
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white mt-20">
           About{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
             SQARIS

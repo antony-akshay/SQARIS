@@ -65,7 +65,7 @@ const ProjectElement = () => {
 
   return (
     <section className="mx-auto px-4 py-20 bg-black text-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mt-20">
         {/* Header */}
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Our{" "}
@@ -73,6 +73,7 @@ const ProjectElement = () => {
             Services
           </span>
         </h2>
+        <div className="h-[2px] w-92 lg:max-w-[90vw] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
         <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto text-sm md:text-base">
           Innovative solutions that transform industries and improve lives
           through intelligent technology

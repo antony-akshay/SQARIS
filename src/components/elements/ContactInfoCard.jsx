@@ -2,12 +2,10 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const ContactInfoCard = () => {
   return (
-    <div className=" text-white md:p-16 p-8 m-16 rounded-xl border border-zinc-700 max-w-7xl mx-8 lg:mx-auto">
+    <div className=" text-white md:p-16 p-8 m-16 rounded-xl border border-zinc-700 max-w-7xl mx-8 lg:mx-auto ">
       <h3 className="md:text-3xl text-2xl font-bold mb-4">Get in Touch</h3>
       <p className="text-gray-400 mb-8 max-w-3xl">
-        Have a question or want to discuss a project? Our team at SQARIS is here
-        to assist you. Fill out the form or reach out to us directly—we’d love to
-        hear from you.
+        Whether you're dreaming big or just curious, the team at SQARIS is just a message away. Let's build something amazing—reach out with your thoughts, ideas, or challenges, and we’ll get back to you in no time!
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -29,7 +27,7 @@ const ContactInfoCard = () => {
           </div>
           <div>
             <h4 className="font-semibold">Email Address</h4>
-            <p className="text-gray-400 text-sm">contact@sqaris.com</p>
+            <p className="text-gray-400 text-sm">sqaris.in@gmail.com</p>
           </div>
         </div>
 

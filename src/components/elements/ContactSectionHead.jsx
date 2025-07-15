@@ -14,7 +14,7 @@ const ContactSection = () => {
         show ? "opacity-100" : "opacity-0"
       }`}
     >
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white mt-20">
           Contact{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
             US
@@ -33,7 +33,7 @@ const ContactSection = () => {
             href="mailto:sqaris@gmail.com"
             className="text-green-400 hover:underline"
           >
-            sqaris@gmail.com
+            sqaris.in@gmail.com
           </a>
         </p>
       </div>

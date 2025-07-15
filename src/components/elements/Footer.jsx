@@ -21,10 +21,38 @@ const Footer = () => {
             cutting-edge technology.
           </p>
           <div className="flex space-x-4 mt-4 text-xl">
-            <FaLinkedin className="text-white hover:text-gray-400 cursor-pointer" />
-            <FaTwitter className="text-white hover:text-gray-400 cursor-pointer" />
-            <FaGithub className="text-white hover:text-gray-400 cursor-pointer" />
-            <FaInstagram className="text-white hover:text-gray-400 cursor-pointer" />
+            <a
+  href="https://www.linkedin.com/in/yourusername"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaLinkedin className="text-white hover:text-gray-400 cursor-pointer" />
+</a>
+
+<a
+  href="https://x.com/sqarisdottech"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaTwitter className="text-white hover:text-gray-400 cursor-pointer" />
+</a>
+
+<a
+  href="https://github.com/yourusername"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaGithub className="text-white hover:text-gray-400 cursor-pointer" />
+</a>
+
+<a
+  href="https://www.instagram.com/sqaris.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaInstagram className="text-white hover:text-gray-400 cursor-pointer" />
+</a>
+
           </div>
         </div>
 
