@@ -64,7 +64,7 @@ export const InfiniteMovingCards = ({
               <div className="relative w-full h-full duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 
                 {/* FRONT */}
-                <div className="absolute inset-0 bg-black rounded-2xl overflow-hidden [backface-visibility:hidden]">
+                <div className=" inset-0 bg-black rounded-2xl overflow-hidden [backface-visibility:hidden]">
                   <div className="h-[85%] relative">
                     <img
                       src={item.image}
@@ -81,7 +81,7 @@ export const InfiniteMovingCards = ({
                 </div>
 
                 {/* BACK */}
-                <div className="absolute inset-0 rounded-2xl bg-[#121212] text-white p-2 sm:p-4 md:p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[10px] sm:text-[12px] md:text-sm leading-tight">
+                <div className="absolute inset-0 rounded-2xl  text-white p-2 sm:p-4 md:p-5 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[10px] sm:text-[12px] md:text-sm leading-tight">
                   <h2 className="text-green-400 text-[11px] sm:text-base md:text-lg font-bold text-center mb-2 sm:mb-4">
                     {item.designation}
                   </h2>
@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
                   {/* DOB */}
                   <div className="mb-2 sm:mb-3">
                     <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Date of birth</p>
-                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2  rounded-xl border border-gray-700">
                       <span className="text-[10px] sm:text-sm">{item.dob}</span>
                       <FaBirthdayCake className="text-green-400 text-xs sm:text-base" />
                     </div>
@@ -98,7 +98,7 @@ export const InfiniteMovingCards = ({
                   {/* Address */}
                   <div className="mb-2 sm:mb-3">
                     <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Address</p>
-                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 rounded-xl border border-gray-700">
                       <span className="text-[10px] sm:text-sm leading-snug">{item.address}</span>
                       <FaHome className="text-green-400 text-xs sm:text-base" />
                     </div>
@@ -107,7 +107,7 @@ export const InfiniteMovingCards = ({
                   {/* Join Date */}
                   <div>
                     <p className="text-[9px] sm:text-xs mb-1 ml-1 sm:ml-2">Joining date</p>
-                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2 bg-[#1c1c1c] rounded-xl border border-gray-700">
+                    <div className="flex justify-between items-center px-2 sm:px-3 py-1 sm:py-2  rounded-xl border border-gray-700">
                       <span className="text-[10px] sm:text-sm">{item.joinDate}</span>
                       <FaCalendarAlt className="text-green-400 text-xs sm:text-base" />
                     </div>

@@ -15,3 +15,6 @@
   animation-direction: var(--animation-direction, forwards);
   animation-duration: var(--animation-duration, 40s);
 }
+html {
+  scroll-behavior: smooth;
+}

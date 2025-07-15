@@ -3,14 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const FeatureShowcase = () => {
+const AboutHead = () => {
 
 
   return (
     <div>
-      <h1 className="w-full max-w-4xl mx-auto p-8 text-white font-bold text-4xl overflow-x-hidden flex justify-center items-center">
-        About SQARIS
-      </h1>
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+          About{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+            SQARIS
+          </span>
+        </h2>
       <div className="h-[2px] w-92 lg:max-w-[90vw] mx-auto mt-2 bg-gradient-to-r from-black via-[#3c3c3c] to-black mb-[37px]" />
       <p className="mx-auto text-gray-100 lg:max-w-[940px] md:max-w-[560px] max-w-72 text-center mb-10">
         At SQARIS, we believe in lifecycle-aligned rewards & performance, high
@@ -27,4 +30,4 @@ const FeatureShowcase = () => {
   );
 };
 
-export default FeatureShowcase;
+export default AboutHead;

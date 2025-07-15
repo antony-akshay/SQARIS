@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBrain, FaHandsHelping } from "react-icons/fa";
-import logo from "../../assets/image/logo.png";
 import timebank from "../../assets/image/project/timebank.png";
 import wie from "../../assets/image/project/wie.png";
 
@@ -68,7 +67,7 @@ const ProjectElement = () => {
     <section className="mx-auto px-4 py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-4">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
             Services
@@ -88,8 +87,8 @@ const ProjectElement = () => {
               whileTap={{ scale: 0.97 }}
               className={`cursor-pointer md:w-60 h-40 md:h-52 py-3  md:p-5 rounded-xl text-center transition duration-300 font-semibold border ${
                 selected === i
-                  ? `bg-zinc-800 text-white shadow-lg ring-2 ${proj.ringColor} border-transparent`
-                  : "bg-zinc-800 border-zinc-700 text-gray-300 hover:ring-2 hover:ring-green-400"
+                  ? ` text-white shadow-lg ring-2 ${proj.ringColor} border-transparent`
+                  : " border-zinc-700 text-gray-300 hover:ring-2 hover:ring-green-400"
               }`}
               onClick={() => setSelected(i)}
             >
@@ -111,7 +110,7 @@ const ProjectElement = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {/* LEFT: Project Description Box */}
-            <div className="md:col-span-2 bg-[#111111] border border-gray-700 rounded-2xl px-6 py-8">
+            <div className="md:col-span-2  border border-gray-700 rounded-2xl px-6 py-8">
               <div className="md:flex  justify-between items-start mb-6">
                 <div className="flex py-2 items-center gap-4">
                   <img src={project.logo} alt="Project Logo" className="h-12" />
@@ -129,7 +128,7 @@ const ProjectElement = () => {
             </div>
 
             {/* RIGHT: Features Box */}
-            <div className="bg-[#111111] border border-gray-700 rounded-2xl px-6 py-6">
+            <div className=" border border-gray-700 rounded-2xl px-6 py-6">
               <h4 className="text-lg sm:text-xl font-bold mb-5 leading-snug">
                 What makes{" "}
                 <span className="text-green-400">

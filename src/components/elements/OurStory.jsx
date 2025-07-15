@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 export default function OurStory() {
   return (
-    <section className="bg-black text-white py-4 px-8">
+    <section className=" text-white py-4 px-8">
       <motion.div
-        className="max-w-7xl mx-auto bg-[#121212] border border-[#2a2a2a] rounded-md px-6 py-8 
+        className="max-w-7xl mx-auto  border border-[#2a2a2a] rounded-md px-6 py-8 
         shadow-md hover:shadow-[0_0_20px_rgba(34,197,94,0.25)] transition-all duration-300 hover:scale-[1.01]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

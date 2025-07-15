@@ -2,8 +2,8 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const ContactInfoCard = () => {
   return (
-    <div className="bg-zinc-900 text-white md:p-16 p-8 m-16 rounded-xl border border-zinc-700 max-w-7xl mx-8 md:mx-auto">
-      <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
+    <div className=" text-white md:p-16 p-8 m-16 rounded-xl border border-zinc-700 max-w-7xl mx-8 lg:mx-auto">
+      <h3 className="md:text-3xl text-2xl font-bold mb-4">Get in Touch</h3>
       <p className="text-gray-400 mb-8 max-w-3xl">
         Have a question or want to discuss a project? Our team at SQARIS is here
         to assist you. Fill out the form or reach out to us directly—we’d love to

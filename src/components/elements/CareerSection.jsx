@@ -8,7 +8,12 @@ const CareerSection = () => {
       <div className="max-w-4xl mx-auto">
         {/* Title with subtle bottom border */}
         <div className="border-b border-zinc-800 pb-6 mb-10 text-center">
-          <h2 className="text-4xl font-bold">Career</h2>
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+         
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+            Career
+          </span>
+        </h2>
         </div>
 
         {/* Subheading */}

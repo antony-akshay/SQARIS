@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const jobData = [
   {
@@ -57,10 +58,15 @@ const jobData = [
 ];
 
 const JobListings = () => {
+    const navigate = useNavigate();
+
+  const handleApply = () => {
+    navigate("/apply");
+  };
   return (
     <section className="bg-black min-h-screen w-full py-20 px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
           Open <span className="text-emerald-400">Positions</span>
         </h2>
         <p className="text-center text-gray-300 text-sm sm:text-base mb-12 md:mb-20">
@@ -102,7 +108,7 @@ const JobListings = () => {
                       ))}
                     </div>
                     <div className="mt-6 flex justify-end">
-                      <button className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
+                      <button onClick={handleApply} className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
                         Apply now
                       </button>
                     </div>
@@ -118,7 +124,7 @@ const JobListings = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="rounded-2xl border border-emerald-400 bg-[#101010] text-white p-6 shadow-[0_0_12px_rgba(110,231,183,0.2)] hover:shadow-[0_0_25px_rgba(110,231,183,0.4)] transition duration-300"
+                className="rounded-2xl border border-emerald-400  text-white p-6 shadow-[0_0_12px_rgba(110,231,183,0.2)] hover:shadow-[0_0_25px_rgba(110,231,183,0.4)] transition duration-300"
               >
                 <h3 className="text-lg sm:text-xl font-semibold">{job.title}</h3>
                 <p className="text-sm text-gray-400 mt-1">
@@ -138,7 +144,7 @@ const JobListings = () => {
                   ))}
                 </div>
                 <div className="mt-6 flex justify-end">
-                  <button className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
+                  <button onClick={handleApply} className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-full transition">
                     Apply now
                   </button>
                 </div>

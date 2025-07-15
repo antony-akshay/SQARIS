@@ -105,7 +105,7 @@ const Footer = () => {
 
       {/* Bottom Line */}
       <div className="mt-10 border-t border-gray-700 pt-4 text-center text-xs text-gray-400">
-        © 2025 Ashrine International Software Solutions Pvt Ltd. All rights reserved.
+        © 2025 SQARIS. All rights reserved.
       </div>
     </footer>
   );

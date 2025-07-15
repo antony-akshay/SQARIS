@@ -14,7 +14,12 @@ const ContactSection = () => {
         show ? "opacity-100" : "opacity-0"
       }`}
     >
-      <h2 className="text-4xl font-bold mb-4">Contact us</h2>
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+          Contact{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500">
+            US
+          </span>
+        </h2>
 
       {/* Fading gradient line */}
       <div className="w-full h-[1px] mb-10 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>

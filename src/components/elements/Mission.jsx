@@ -4,7 +4,7 @@ export default function Mission() {
   return (
     <section className="bg-black text-white py-16 px-4">
       <motion.div
-        className="max-w-3xl mx-auto bg-[#121212] border border-[#2a2a2a] rounded-md px-6 py-10 text-center shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.02]"
+        className="max-w-3xl mx-auto  border border-[#2a2a2a] rounded-md px-6 py-10 text-center shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.02]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: 'easeOut' }}
